@@ -1,15 +1,15 @@
 use_frameworks!
 
-workspace 'SyncKitCoreData.xcworkspace'
-project 'SyncKitCoreDataExample/SyncKitCoreDataExample'
+workspace 'PZSyncKitCoreData.xcworkspace'
+project 'PZSyncKitCoreDataExample/PZSyncKitCoreDataExample'
 
-target 'SyncKitCoreDataExample' do
+target 'PZSyncKitCoreDataExample' do
 	
   platform :ios, '10.0'
 
-  pod 'SyncKit/CoreData', :path => '../../'
+  pod 'PZSyncKit/CoreData', :path => '../../'
 
-  target 'SyncKitCoreDataExampleTests' do
+  target 'PZSyncKitCoreDataExampleTests' do
     inherit! :search_paths
   end
 end
@@ -17,5 +17,5 @@ end
 target 'WatchApp' do
 	project 'WatchApp/WatchApp'
 	platform :watchos, '3.0'
-	pod 'SyncKit/CoreData', :path => '../../'
+	pod 'PZSyncKit/CoreData', :path => '../../'
 end

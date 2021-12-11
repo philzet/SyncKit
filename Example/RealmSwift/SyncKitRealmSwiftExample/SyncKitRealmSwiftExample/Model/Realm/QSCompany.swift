@@ -1,13 +1,13 @@
 //
 //  QSCompany.swift
-//  SyncKitRealmSwiftExample
+//  PZSyncKitRealmSwiftExample
 //
 //  Created by Manuel Entrena on 31/08/2017.
 //  Copyright © 2017 Manuel Entrena. All rights reserved.
 //
 
 import RealmSwift
-import SyncKit
+import PZSyncKit
 
 class QSCompany: Object, PrimaryKey {
     

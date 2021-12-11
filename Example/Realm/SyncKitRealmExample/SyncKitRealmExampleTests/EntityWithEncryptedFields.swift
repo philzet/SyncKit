@@ -9,7 +9,7 @@
 import Foundation
 import Realm
 import CloudKit
-import SyncKit
+import PZSyncKit
 
 class EntityWithEncryptedFields: RLMObject, PrimaryKey, EncryptedObject {
     

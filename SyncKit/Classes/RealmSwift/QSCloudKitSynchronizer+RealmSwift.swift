@@ -13,7 +13,7 @@ import CloudKit
 extension CloudKitSynchronizer {
     
     /**
-     *  Creates a new `QSCloudKitSynchronizer` prepared to work with a Realm model and the SyncKit default record zone in the private database.
+     *  Creates a new `QSCloudKitSynchronizer` prepared to work with a Realm model and the PZSyncKit default record zone in the private database.
      - Parameters:
      - containerName: Identifier of the iCloud container to be used. The application must have the right entitlements to be able to access this container.
      - configuration: Configuration of the Realm that is to be tracked and synchronized.

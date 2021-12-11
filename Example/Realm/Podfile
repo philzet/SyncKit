@@ -1,26 +1,26 @@
 use_frameworks!
 
-workspace 'SyncKitRealm.xcworkspace'
-project 'SyncKitRealmExample/SyncKitRealmExample'
+workspace 'PZSyncKitRealm.xcworkspace'
+project 'PZSyncKitRealmExample/PZSyncKitRealmExample'
 
-target 'SyncKitRealmExample' do
+target 'PZSyncKitRealmExample' do
 	
   platform :ios, '10.0'
 
   pod 'Realm'
-  pod 'SyncKit/Realm', :path => '../../'
+  pod 'PZSyncKit/Realm', :path => '../../'
 
-  target 'SyncKitRealmExampleTests' do
+  target 'PZSyncKitRealmExampleTests' do
     inherit! :search_paths
   end
 end
 
-target 'SyncKitRealmExampleTodayExtension' do
+target 'PZSyncKitRealmExampleTodayExtension' do
 
-#	project 'SyncKitRealmExample'
+#	project 'PZSyncKitRealmExample'
 	platform :ios, '10.0'
 	
-	pod 'SyncKit/Realm', :path => '../../'
+	pod 'PZSyncKit/Realm', :path => '../../'
 
 	pod 'Realm'
 end

@@ -202,7 +202,7 @@ public class CloudKitSynchronizer: NSObject {
     
     // MARK: - Public
     
-    ///  These keys will be added to CKRecords uploaded to CloudKit and are used by SyncKit internally.
+    ///  These keys will be added to CKRecords uploaded to CloudKit and are used by PZSyncKit internally.
     public static let metadataKeys: [String] = [CloudKitSynchronizer.deviceUUIDKey, CloudKitSynchronizer.modelCompatibilityVersionKey]
     
     /// Synchronize data with CloudKit.

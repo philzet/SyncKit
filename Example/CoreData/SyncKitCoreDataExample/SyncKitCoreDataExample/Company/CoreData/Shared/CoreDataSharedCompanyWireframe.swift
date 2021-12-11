@@ -1,13 +1,13 @@
 //
 //  CoreDataSharedCompanyWireframe.swift
-//  SyncKitCoreDataExample
+//  PZSyncKitCoreDataExample
 //
 //  Created by Manuel Entrena on 23/06/2019.
 //  Copyright © 2019 Manuel Entrena. All rights reserved.
 //
 
 import Foundation
-import SyncKit
+import PZSyncKit
 import CoreData
 
 class CoreDataSharedCompanyWireframe: CompanyWireframe {

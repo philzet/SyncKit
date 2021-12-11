@@ -1,13 +1,13 @@
 //
 //  DefaultCoreDataAdapterDelegateTests.swift
-//  SyncKitCoreDataExampleTests
+//  PZSyncKitCoreDataExampleTests
 //
 //  Created by Manuel Entrena on 10/06/2019.
 //  Copyright © 2019 Manuel Entrena. All rights reserved.
 //
 
 import Foundation
-@testable import SyncKit
+@testable import PZSyncKit
 import XCTest
 import CoreData
 import CloudKit

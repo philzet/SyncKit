@@ -110,7 +110,7 @@ struct ObjectUpdate {
 
 @objc public class RealmAdapter: NSObject, ModelAdapter {
     
-    static let shareRelationshipKey = "com.syncKit.shareRelationship"
+    static let shareRelationshipKey = "com.PZSyncKit.shareRelationship"
     
     @objc public let persistenceRealmConfiguration: RLMRealmConfiguration
     @objc public let targetRealmConfiguration: RLMRealmConfiguration
@@ -1196,12 +1196,12 @@ struct ObjectUpdate {
     }
     
     public func didFinishImport(with error: Error?) {
-    
-        guard realmProvider != nil else { return }
         
         tempFileManager.clearTempFiles()
         
-        executeOnMainQueue {
+        executeOnMainQueue { [weak self] in
+            guard let self = self,
+                  realmProvider != nil else { return }
             updateHasChanges(realm: self.realmProvider.persistenceRealm)
         }
     }

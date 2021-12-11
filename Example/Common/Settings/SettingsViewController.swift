@@ -1,13 +1,13 @@
 //
 //  SettingsViewController.swift
-//  SyncKitCoreDataExample
+//  PZSyncKitCoreDataExample
 //
 //  Created by Manuel Entrena on 22/06/2019.
 //  Copyright © 2019 Manuel Entrena. All rights reserved.
 //
 
 import UIKit
-import SyncKit
+import PZSyncKit
 
 class SettingsViewController: UITableViewController {
     

@@ -1,6 +1,6 @@
 //
 //  TodayViewController.swift
-//  SyncKitRealmExampleTodayExtension
+//  PZSyncKitRealmExampleTodayExtension
 //
 //  Created by Manuel Entrena on 29/06/2019.
 //  Copyright © 2019 Manuel Entrena. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import NotificationCenter
 import Realm
-import SyncKit
+import PZSyncKit
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
@@ -20,7 +20,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         return try! RLMRealm(configuration: configuration)
     }()
     lazy var synchronizer: CloudKitSynchronizer = {
-        return CloudKitSynchronizer.privateSynchronizer(containerName: "iCloud.com.mentrena.SyncKitRealmExample", configuration: self.realm.configuration, suiteName: "group.com.mentrena.todayextensiontest")
+        return CloudKitSynchronizer.privateSynchronizer(containerName: "iCloud.com.mentrena.PZSyncKitRealmExample", configuration: self.realm.configuration, suiteName: "group.com.mentrena.todayextensiontest")
     }()
     
     override func viewDidLoad() {

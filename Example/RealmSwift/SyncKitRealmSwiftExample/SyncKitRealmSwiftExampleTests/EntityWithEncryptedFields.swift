@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 import CloudKit
-import SyncKit
+import PZSyncKit
 
 class EntityWithEncryptedFields: Object, PrimaryKey, EncryptedObject {
     @objc dynamic var name: String = ""

@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-import SyncKit
+import PZSyncKit
 
 @objc(QSEmployee)
 public class QSEmployee: NSManagedObject, PrimaryKey, ParentKey {

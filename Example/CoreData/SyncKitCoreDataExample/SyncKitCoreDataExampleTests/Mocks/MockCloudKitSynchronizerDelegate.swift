@@ -1,6 +1,6 @@
 //
 //  MockCloudKitSynchronizerDelegate.swift
-//  SyncKitCoreDataExampleTests
+//  PZSyncKitCoreDataExampleTests
 //
 //  Created by Manuel on 27/07/2021.
 //  Copyright © 2021 Manuel Entrena. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 import CloudKit
-import SyncKit
+import PZSyncKit
 
 class MockCloudKitSynchronizerDelegate: CloudKitSynchronizerDelegate {
     

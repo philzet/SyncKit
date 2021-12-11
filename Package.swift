@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SyncKit",
+    name: "PZSyncKit",
     platforms: [
         .macOS(.v10_12),
         .iOS(.v11),
@@ -10,17 +10,17 @@ let package = Package(
         .watchOS(.v3)
     ],
     products: [
-        .library(name: "SyncKit/CoreData", targets: ["SyncKit/CoreData"]),
-        .library(name: "SyncKit/Realm", targets: ["SyncKit/Realm"]),
-        .library(name: "SyncKit/RealmSwift", targets: ["SyncKit/RealmSwift"])],
+        .library(name: "PZSyncKit/CoreData", targets: ["PZSyncKit/CoreData"]),
+        .library(name: "PZSyncKit/Realm", targets: ["PZSyncKit/Realm"]),
+        .library(name: "PZSyncKit/RealmSwift", targets: ["PZSyncKit/RealmSwift"])],
     dependencies: [
         .package(url: "https://github.com/realm/realm-cocoa", from: "10.5.2")
     ],
     targets: [
         .target(
-            name: "SyncKit/CoreData",
+            name: "PZSyncKit/CoreData",
             dependencies: [],
-            path: "SyncKit/Classes/CoreData",
+            path: "PZSyncKit/Classes/CoreData",
             resources: [
                 .process("QSCloudKitSyncModel.xcdatamodeld")
             ],
@@ -29,19 +29,19 @@ let package = Package(
             ]
         ),
          .target(
-            name: "SyncKit/Realm",
+            name: "PZSyncKit/Realm",
             dependencies: [
                 .product(name: "Realm", package: "realm-cocoa")
             ],
-            path: "SyncKit/Classes/Realm"
+            path: "PZSyncKit/Classes/Realm"
         ),
         .target(
-            name: "SyncKit/RealmSwift",
+            name: "PZSyncKit/RealmSwift",
             dependencies: [
                 .product(name: "RealmSwift", package: "realm-cocoa"),
                 .product(name: "Realm", package: "realm-cocoa")
             ],
-            path: "SyncKit/Classes/RealmSwift"
+            path: "PZSyncKit/Classes/RealmSwift"
         )
     ],
     swiftLanguageVersions: [.v5]

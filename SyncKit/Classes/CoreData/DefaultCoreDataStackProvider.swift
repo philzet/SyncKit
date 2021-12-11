@@ -1,6 +1,6 @@
 //
 //  DefaultCoreDataStackProvider.swift
-//  SyncKit
+//  PZSyncKit
 //
 //  Created by Manuel Entrena on 08/06/2019.
 //  Copyright © 2019 Manuel Entrena. All rights reserved.

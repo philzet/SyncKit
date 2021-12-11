@@ -1,13 +1,13 @@
 //
 //  CloudKitSynchronizerTests.swift
-//  SyncKitCoreDataExampleTests
+//  PZSyncKitCoreDataExampleTests
 //
 //  Created by Manuel Entrena on 11/06/2019.
 //  Copyright © 2019 Manuel Entrena. All rights reserved.
 //
 
 import XCTest
-import SyncKit
+import PZSyncKit
 import CloudKit
 
 class CloudKitSynchronizerTests: XCTestCase {

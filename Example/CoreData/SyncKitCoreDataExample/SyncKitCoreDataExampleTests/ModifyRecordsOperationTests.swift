@@ -1,13 +1,13 @@
 //
 //  ModifyRecordsOperationTests.swift
-//  SyncKitCoreDataExampleTests
+//  PZSyncKitCoreDataExampleTests
 //
 //  Created by Manuel Entrena on 10/09/2020.
 //  Copyright © 2020 Manuel Entrena. All rights reserved.
 //
 
 import Foundation
-@testable import SyncKit
+@testable import PZSyncKit
 import XCTest
 import CloudKit
 

@@ -1,6 +1,6 @@
 //
-//  SyncKitRealmTests.swift
-//  SyncKitRealmTests
+//  PZSyncKitRealmTests.swift
+//  PZSyncKitRealmTests
 //
 //  Created by Manuel Entrena on 29/08/2017.
 //  Copyright © 2017 Manuel Entrena. All rights reserved.
@@ -9,10 +9,10 @@
 import XCTest
 import Realm
 import CloudKit
-import SyncKit
-@testable import SyncKitRealmExample
+import PZSyncKit
+@testable import PZSyncKitRealmExample
 
-class SyncKitRealmTests: XCTestCase, RealmAdapterDelegate {
+class PZSyncKitRealmTests: XCTestCase, RealmAdapterDelegate {
     
     var customMergePolicyBlock: ((_ adapter: RealmAdapter, _ changes: [String: Any], _ object: RLMObject) -> ())?
     
@@ -52,7 +52,7 @@ class SyncKitRealmTests: XCTestCase, RealmAdapterDelegate {
     
     func persistenceConfigurationWith(identifier: String) -> RLMRealmConfiguration {
         
-        let configuration = SyncKit.RealmAdapter.defaultPersistenceConfiguration()
+        let configuration = PZSyncKit.RealmAdapter.defaultPersistenceConfiguration()
         configuration.inMemoryIdentifier = identifier
         return configuration
     }
@@ -122,7 +122,7 @@ class SyncKitRealmTests: XCTestCase, RealmAdapterDelegate {
     
     func realmAdapter(targetConfiguration: RLMRealmConfiguration, persistenceConfiguration: RLMRealmConfiguration) -> RealmAdapter {
         
-        return SyncKit.RealmAdapter(persistenceRealmConfiguration: persistenceConfiguration,
+        return PZSyncKit.RealmAdapter(persistenceRealmConfiguration: persistenceConfiguration,
                                     targetRealmConfiguration: targetConfiguration,
                                     recordZoneID: CKRecordZone.ID(zoneName: "zone", ownerName: "owner"))
     }
@@ -895,7 +895,7 @@ class SyncKitRealmTests: XCTestCase, RealmAdapterDelegate {
         let realm = realmWith(identifier: "t22")
         let adapter = realmAdapter(targetConfiguration: realm.configuration, persistenceConfiguration: persistenceConfigurationWith(identifier: "p22"))
         
-        let data = try! Data(contentsOf: Bundle(for: SyncKitRealmTests.self).url(forResource: "QSCompany.1739C6A5-C07E-48A5-B83E-AB07694F23DF", withExtension: "")!)
+        let data = try! Data(contentsOf: Bundle(for: PZSyncKitRealmTests.self).url(forResource: "QSCompany.1739C6A5-C07E-48A5-B83E-AB07694F23DF", withExtension: "")!)
         let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
         let record = CKRecord(coder: unarchiver)
         unarchiver.finishDecoding()
@@ -1524,7 +1524,7 @@ class SyncKitRealmTests: XCTestCase, RealmAdapterDelegate {
         
         // Test
         
-        let data = try! Data(contentsOf: Bundle(for: SyncKitRealmTests.self).url(forResource: "serverChangeToken.AQAAAWPa1DUC", withExtension: nil)!)
+        let data = try! Data(contentsOf: Bundle(for: PZSyncKitRealmTests.self).url(forResource: "serverChangeToken.AQAAAWPa1DUC", withExtension: nil)!)
         let token = NSKeyedUnarchiver.unarchiveObject(with: data) as! CKServerChangeToken
         UserDefaults.standard.set(data, forKey: "containerQSCloudKitFetchChangesServerTokenKey")
         
@@ -1603,7 +1603,7 @@ class SyncKitRealmTests: XCTestCase, RealmAdapterDelegate {
 }
 
 @available(iOS 15, OSX 12, *)
-extension SyncKitRealmTests {
+extension PZSyncKitRealmTests {
     func testRecordsToUpload_encryptedFields_areEncryptedInRecord() {
         let configuration = RLMRealmConfiguration()
         configuration.inMemoryIdentifier = "t100"

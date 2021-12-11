@@ -54,12 +54,12 @@ import Realm
     // MARK: - File directory
     
     /**
-     *  If using app groups, SyncKit offers the option to store its tracking database in the shared container so that it's
-     *  accessible by SyncKit from any of the apps in the group. This method returns the path used in this case.
+     *  If using app groups, PZSyncKit offers the option to store its tracking database in the shared container so that it's
+     *  accessible by PZSyncKit from any of the apps in the group. This method returns the path used in this case.
      *
      *  @param  appGroup   Identifier of an App Group this app belongs to.
      *
-     *  @return File path, in the shared container, where SyncKit will store its tracking database.
+     *  @return File path, in the shared container, where PZSyncKit will store its tracking database.
      */
     
     public static func realmPath(appGroup: String?) -> String {

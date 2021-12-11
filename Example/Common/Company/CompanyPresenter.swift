@@ -1,6 +1,6 @@
 //
 //  CompanyPresenter.swift
-//  SyncKitCoreDataExample
+//  PZSyncKitCoreDataExample
 //
 //  Created by Manuel Entrena on 21/06/2019.
 //  Copyright © 2019 Manuel Entrena. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 import CloudKit
-import SyncKit
+import PZSyncKit
 
 protocol CompanyPresenter: class {
     func viewDidLoad()
@@ -158,7 +158,7 @@ extension DefaultCompanyPresenter {
                                                     message: "The app hasn't synced in too long and the CloudKit token isn't valid. Data must be synced from scratch. Syncing will be disabled now, you can enable it again in Settings",
                                                     preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
-                // reset SyncKit
+                // reset PZSyncKit
                 self.settingsManager.isSyncEnabled = false
             }))
             view?.present(alertController, animated: true, completion: nil)

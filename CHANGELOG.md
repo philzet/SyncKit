@@ -3,7 +3,7 @@
 ## 0.7.9
 ### Changed
 - Fixes for record reupload, RealmSwift non-optional properties.
-- Sample project shows how to connect/disconnect SyncKit.
+- Sample project shows how to connect/disconnect PZSyncKit.
 
 ## 0.7.2
 ### Changed
@@ -30,11 +30,11 @@
 
 ### Changed
 - Some of the APIs have changed.
-- SyncKit now requires iOS 10+ or OS X 10.12+.
+- PZSyncKit now requires iOS 10+ or OS X 10.12+.
 
 ## 0.5.8
 ### Added
-- SyncKit can use CKAsset for Data property types.
+- PZSyncKit can use CKAsset for Data property types.
 
 ## 0.5.7
 ### Fixed

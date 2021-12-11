@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-import SyncKit
+import PZSyncKit
 
 @objc(EntityWithEncryptedFields)
 public class EntityWithEncryptedFields: NSManagedObject {

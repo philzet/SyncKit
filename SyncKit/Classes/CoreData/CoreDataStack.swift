@@ -1,6 +1,6 @@
 //
 //  CoreDataStack.swift
-//  SyncKit
+//  PZSyncKit
 //
 //  Created by Manuel Entrena on 02/06/2019.
 //  Copyright © 2019 Manuel Entrena. All rights reserved.

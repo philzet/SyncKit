@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-import SyncKit
+import PZSyncKit
 
 @objc(QSTestEntity2)
 public class QSTestEntity2: NSManagedObject, PrimaryKey {

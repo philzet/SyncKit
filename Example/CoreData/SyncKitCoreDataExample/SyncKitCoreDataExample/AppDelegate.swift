@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  SyncKitCoreDataExample
+//  PZSyncKitCoreDataExample
 //
 //  Created by Manuel Entrena on 08/06/2019.
 //  Copyright © 2019 Manuel Entrena. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-import SyncKit
+import PZSyncKit
 import CloudKit
 
 @UIApplicationMain
@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         settingsManager.delegate = self
         loadCoreData()
-        loadSyncKit()
+        loadPZSyncKit()
         loadPrivateModule()
         loadSharedModule()
         loadSettingsModule()
@@ -83,7 +83,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                       storeURL: storeURL!)
     }
     
-    func loadSyncKit() {
+    func loadPZSyncKit() {
         if settingsManager.isSyncEnabled {
             synchronizer = CloudKitSynchronizer.privateSynchronizer(containerName: "your-iCloud-container",
                                                                     managedObjectContext: self.coreDataStack.managedObjectContext)
@@ -117,11 +117,11 @@ extension AppDelegate: SettingsManagerDelegate {
             settingsViewController?.privateSynchronizer = nil
             loadPrivateModule()
         } else {
-            connectSyncKit()
+            connectPZSyncKit()
         }
     }
     
-    func connectSyncKit() {
+    func connectPZSyncKit() {
         let alertController = UIAlertController(title: "Connecting CloudKit", message: "Would you like to bring existing data into CloudKit?", preferredStyle: .alert)
         let keepData = UIAlertAction(title: "Keep existing data", style: .default) { (_) in
             self.createNewSynchronizer()
@@ -140,7 +140,7 @@ extension AppDelegate: SettingsManagerDelegate {
     }
     
     func createNewSynchronizer() {
-        loadSyncKit()
+        loadPZSyncKit()
         settingsViewController?.privateSynchronizer = synchronizer
         loadPrivateModule()
     }

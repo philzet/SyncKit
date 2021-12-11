@@ -1,6 +1,6 @@
 //
 //  RecordProcessingDelegate.swift
-//  SyncKitRealmSwiftExampleTests
+//  PZSyncKitRealmSwiftExampleTests
 //
 //  Created by Manuel Entrena on 09/11/2020.
 //  Copyright © 2020 Manuel Entrena. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 import CloudKit
 import RealmSwift
-import SyncKit
+import PZSyncKit
 
 
 class RecordProcessingDelegate: RealmSwiftAdapterRecordProcessing {

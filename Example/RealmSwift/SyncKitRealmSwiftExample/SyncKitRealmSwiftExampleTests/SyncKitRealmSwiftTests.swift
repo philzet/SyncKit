@@ -1,6 +1,6 @@
 //
-//  SyncKitRealmSwiftTests.swift
-//  SyncKitRealmSwiftTests
+//  PZSyncKitRealmSwiftTests.swift
+//  PZSyncKitRealmSwiftTests
 //
 //  Created by Manuel Entrena on 29/08/2017.
 //  Copyright © 2017 Manuel Entrena. All rights reserved.
@@ -9,10 +9,10 @@
 import XCTest
 import RealmSwift
 import CloudKit
-import SyncKit
-@testable import SyncKitRealmSwiftExample
+import PZSyncKit
+@testable import PZSyncKitRealmSwiftExample
 
-class SyncKitRealmSwiftTests: XCTestCase, RealmSwiftAdapterDelegate {
+class PZSyncKitRealmSwiftTests: XCTestCase, RealmSwiftAdapterDelegate {
     
     var customMergePolicyBlock: ((_ adapter: RealmSwiftAdapter, _ changes: [String: Any], _ object: Object) -> ())?
     
@@ -901,7 +901,7 @@ class SyncKitRealmSwiftTests: XCTestCase, RealmSwiftAdapterDelegate {
         let realm = realmWith(identifier: "t22")
         let adapter = realmAdapter(targetConfiguration: realm.configuration, persistenceConfiguration: persistenceConfigurationWith(identifier: "p22"))
         
-        let data = try! Data(contentsOf: Bundle(for: SyncKitRealmSwiftTests.self).url(forResource: "QSCompany.1739C6A5-C07E-48A5-B83E-AB07694F23DF", withExtension: "")!)
+        let data = try! Data(contentsOf: Bundle(for: PZSyncKitRealmSwiftTests.self).url(forResource: "QSCompany.1739C6A5-C07E-48A5-B83E-AB07694F23DF", withExtension: "")!)
         let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
         let record = CKRecord(coder: unarchiver)
         unarchiver.finishDecoding()
@@ -1532,7 +1532,7 @@ class SyncKitRealmSwiftTests: XCTestCase, RealmSwiftAdapterDelegate {
         
         // Test
         
-        let data = try! Data(contentsOf: Bundle(for: SyncKitRealmSwiftTests.self).url(forResource: "serverChangeToken.AQAAAWPa1DUC", withExtension: nil)!)
+        let data = try! Data(contentsOf: Bundle(for: PZSyncKitRealmSwiftTests.self).url(forResource: "serverChangeToken.AQAAAWPa1DUC", withExtension: nil)!)
         let token = NSKeyedUnarchiver.unarchiveObject(with: data) as! CKServerChangeToken
         UserDefaults.standard.set(data, forKey: "containerQSCloudKitFetchChangesServerTokenKey")
         
@@ -1571,7 +1571,7 @@ class SyncKitRealmSwiftTests: XCTestCase, RealmSwiftAdapterDelegate {
     func testSync_objectCreatedForExistingRecord_usesDownloadedRecordForUpdate() {
         
         // Load saved record
-        let data = try! Data(contentsOf: Bundle(for: SyncKitRealmSwiftTests.self).url(forResource: "QSCompany.1739C6A5-C07E-48A5-B83E-AB07694F23DF", withExtension: "")!)
+        let data = try! Data(contentsOf: Bundle(for: PZSyncKitRealmSwiftTests.self).url(forResource: "QSCompany.1739C6A5-C07E-48A5-B83E-AB07694F23DF", withExtension: "")!)
         let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
         let record = CKRecord(coder: unarchiver)
         unarchiver.finishDecoding()
@@ -1665,7 +1665,7 @@ class SyncKitRealmSwiftTests: XCTestCase, RealmSwiftAdapterDelegate {
 
 // MARK: - Encrypted fields
 @available(iOS 15, OSX 12, *)
-extension SyncKitRealmSwiftTests {
+extension PZSyncKitRealmSwiftTests {
     
     func testRecordsToUpload_encryptedFields_areEncryptedInRecord() {
         var configuration = Realm.Configuration()

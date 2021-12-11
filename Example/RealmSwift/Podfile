@@ -1,16 +1,16 @@
 use_frameworks!
 
-workspace 'SyncKitRealmSwift.xcworkspace'
-project 'SyncKitRealmSwiftExample/SyncKitRealmSwiftExample'
+workspace 'PZSyncKitRealmSwift.xcworkspace'
+project 'PZSyncKitRealmSwiftExample/PZSyncKitRealmSwiftExample'
 
-target 'SyncKitRealmSwiftExample' do
+target 'PZSyncKitRealmSwiftExample' do
 	
   platform :ios, '10.0'
 
   pod 'RealmSwift'
-  pod 'SyncKit/RealmSwift', :path => '../../'
+  pod 'PZSyncKit/RealmSwift', :path => '../../'
 
-  target 'SyncKitRealmSwiftExampleTests' do
+  target 'PZSyncKitRealmSwiftExampleTests' do
     inherit! :search_paths
   end
 end

@@ -1,13 +1,13 @@
 //
 //  QSEmployee.swift
-//  SyncKitRealmSwiftExample
+//  PZSyncKitRealmSwiftExample
 //
 //  Created by Manuel Entrena on 31/08/2017.
 //  Copyright © 2017 Manuel Entrena. All rights reserved.
 //
 
 import Realm
-import SyncKit
+import PZSyncKit
 
 class QSEmployee: RLMObject, PrimaryKey, ParentKey {
 
